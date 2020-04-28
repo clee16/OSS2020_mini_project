@@ -1,0 +1,10 @@
+bone 21800234 engineering 2
+hery 21900264 internationalLaw 1
+subin 21600327 computerScience 1
+kim 22000832 GLS 0
+joy 21700573 architecture 2
+love 21800342 psychology 
+ahn 21600283 internationalLaw 21
+hyeon 21600948 math 2
+seop 21600746 internationalLaw 1
+
