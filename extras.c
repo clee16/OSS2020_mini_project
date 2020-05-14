@@ -138,3 +138,32 @@ void display_statistics(Member* memlist[],int** count,int sortedBy){
     }
   }
 }
+
+/* Advanced search feature
+** This feature allows the user to find members by specifying major and # of activities */
+void advanced_search(Member* memlist[], int** count) {
+	char major[32];		// condition 1
+	int activity;		// condition 2
+	int found = 0;
+	
+	printf("Enter the major you want to search: ");
+	scanf("%s", major);
+	getchar();
+	printf("Enter the activity number you want to search: ");	
+	scanf("%d", &activity);
+	getchar();
+
+	printf("\nSearching.....\n\n");
+
+	printf("Member list\n");
+  	printf("No. name      id            major      # of activity\n");		
+	for(int i = 0; i < **count; i++) {
+		if(!strcmp(memlist[i]->major, major) && memlist[i]->activity == activity) {
+			printf("%2d %-8s %5s %16s\t %5d\n",i+1,memlist[i]->name,memlist[i]->id,memlist[i]->major,memlist[i]->activity);
+			found = 1;
+		}
+  	}
+	
+	if (!found)
+		printf("No result found for major = \"%s\" and # of activity = \"%d\"\n", major, activity);
+}

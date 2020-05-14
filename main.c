@@ -114,6 +114,9 @@ void input_handler(char input[], Member* memlist[],int* count,Member find,int* i
     update_information(memlist,&count,&find);
     show_all(memlist,&count);
   }
+  else if(!strcmp(input, "10")){
+    advanced_search(memlist, &count);
+  }
   else if(!strcmp(input, "*")){
     show_all(memlist,&count);
   }
@@ -142,13 +145,14 @@ void display_menu(){
 	printf(" 3. Member search by entering name\n");
 	printf(" 4. Save the entire data to data.txt file\n");
 	printf(" 5. Export the entire data from data.txt to report.txt\n");
-  printf(" --------------------------------------------\n");
-  printf(" 6. Delete member\n");
-  printf(" 7. Sorting by ID\n");
-  printf(" 8. Sorting by Activity\n");
-  printf(" 9. Update information\n");
-  printf(" *. Show current state\n");
-  printf(" --------------------------------------------\n");
-  printf("99. quit\n");
-  printf("*********************************************\n");
+  	printf(" --------------------------------------------\n");
+  	printf(" 6. Delete member\n");
+	printf(" 7. Sorting by ID\n");
+  	printf(" 8. Sorting by Activity\n");
+  	printf(" 9. Update information\n");
+  	printf("10. Advanced search\n");
+	printf(" *. Show current state\n");
+  	printf(" --------------------------------------------\n");
+  	printf("99. quit\n");
+  	printf("*********************************************\n");
 }

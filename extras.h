@@ -15,5 +15,5 @@ void show_all(Member* memlist[],int** count);
 //////////////////////////////////////////////
 void update_information(Member* memlist[],int** count,Member* tempuser);
 void display_statistics(Member* memlist[],int** count,int sortedBy);
-
+void advanced_search(Member* memlist[], int** count);
 #endif
